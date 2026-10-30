@@ -1,0 +1,17 @@
+flowchart TB
+    data["Eligible patients"] --> train
+    data --> validation["Validation · 20%<br/>Compare candidates by F2"]
+    data --> test["Test · 20%<br/>Keep untouched"]
+    subgraph train["Training · 60%"]
+        direction TB
+        fit["Fit baseline candidates"]
+        cv["Tune with CV<br/>Preprocess inside folds"]
+    end
+    train --> validation
+    validation --> refit["Freeze choice, then refit<br/>Training + validation · 80%"]
+    refit --> final["One final test evaluation<br/>F2, precision, recall<br/>and confusion matrix"]
+    test --> final
+    classDef default fill:#ffffff,stroke:#57718a,color:#172033;
+    classDef result fill:#eef7f1,stroke:#398454,color:#172033;
+    class final result;
+    style train fill:#f2f6fc,stroke:#8aa8cc,color:#172033

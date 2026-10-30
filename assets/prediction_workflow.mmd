@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph inputs["1. Prepare Requests"]
+        direction TB
+        csv["New records"] --> check["Validate inputs"]
+    end
+    subgraph saved["2. Reuse the Pipeline"]
+        direction TB
+        artifact["Saved pipeline"] --> prep["Impute · encode · scale"]
+        prep --> model["Predict"]
+    end
+    subgraph outputs["3. Deliver Results"]
+        direction TB
+        result["Class + probability"] --> report["CSV + batch report"]
+        rejected["Rejected rows + reasons"] --> report
+    end
+    inputs -->|Accepted rows| saved
+    inputs -->|Invalid rows| outputs
+    saved --> outputs
+    classDef default fill:#ffffff,stroke:#57718a,color:#172033;
+    style inputs fill:#f2f6fc,stroke:#8aa8cc,color:#172033
+    style saved fill:#f1f8f4,stroke:#80b394,color:#172033
+    style outputs fill:#fff9ee,stroke:#d1ad64,color:#172033

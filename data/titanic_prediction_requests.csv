@@ -1,0 +1,15 @@
+request_id,Age,SibSp,Parch,Fare,Sex,Embarked
+request-01,28,0,0,7.9,male,S
+request-02,,0,0,14.5,female,C
+request-03,35,1,0,50,female,X
+request-04,-5,0,0,7.9,male,S
+request-05,thirty,0,0,7.9,male,S
+request-06,100,0,0,25,female,S
+request-07,28,0,0,unknown,male,S
+request-08,28,1.5,0,25,female,S
+request-09,25,0,0,10,,S
+request-10,25,0,0,10,other,Q
+request-11,45,1,1,75,female,C
+request-12,40,0,0,5000,male,S
+request-13,22,,1,18,female,Q
+request-14,,,,,,
