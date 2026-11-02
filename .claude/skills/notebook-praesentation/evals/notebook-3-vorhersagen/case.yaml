@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: notebook-3-vorhersagen
+expected_outcome: |
+  Läuft im Projektordner nf-ds-hands-on-ml-de. Es entsteht docs/3_from_training_to_predictions.pptx:
+  eine deutsche Lern-Präsentation im Design „Tinte und Textmarker“, die als Reise durch die acht
+  Abschnitte des Notebooks führt (Kapitelfolien „STATION n VON N“), Code-Folien mit
+  „Das nimmst du mit“-Boxen, je eine Übungsfolie zu den sechs Aufgaben, Rückblick, Regeln und Ausblick.
+  Alle Zahlen stammen aus dem Notebook oder sind als nachgerechnet ausgewiesen. Die Datei ist
+  validiert und wurde gerendert und visuell geprüft.
+  Weil das Notebook keine gespeicherten Ausgaben hat, wird es vorher einmal in einer Sandbox-Kopie
+  ausgeführt. Vor der Nutzung von solutions/3_from_training_to_predictions.ipynb fragt der Lauf nach.
